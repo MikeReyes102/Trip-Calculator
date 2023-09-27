@@ -1,0 +1,70 @@
+<!-- 
+    Name: Michael Reyes-Casanova
+    Date: 9/27/23
+    Assignment: Final Practical Exam
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Exam PE</title>
+    <style>
+        div {
+            margin: 1rem auto;
+        }
+    </style>
+ </head>
+ <body>
+    <header>
+        <h1>Michael Reyes-Casanova, Trip Stats Calculator</h1>
+    </header>
+    <form>
+        <div>
+            <label for="tripName">Trip Name:</label>
+            <input type="text" id="tripName">
+        </div>
+        <div>
+            <label for="startMiles">Starting Mileage:</label>
+            <input type="text" id="startMiles">
+        </div>
+        <div>
+            <label for="endMiles">Ending Mileage:</label>
+            <input type="text" id="endMiles">
+        </div>
+        <div>
+            <label for="gas">Gallons of Gas Used:</label>
+            <input type="text" id="gas">
+        </div>
+        <div>
+            <input type="button" value="Get Trip Summary" onclick="openWindow()">
+        </div>
+    </form>
+
+    <script>
+
+        function processInfo() {
+            var tripSummary = {};
+
+            var tripName = document.getElementById("tripName").value;
+            var startMiles = Number( document.getElementById("startMiles").value);
+            var endMiles = Number(document.getElementById("endMiles").value);
+            var totalTravel = Number(endMiles - startMiles);
+            var gas = Number(document.getElementById("gas").value);
+
+            tripSummary.name = tripName;
+            tripSummary.travel = totalTravel;
+            tripSummary.gas = gas;
+            tripSummary.economy = totalTravel / gas;
+
+            console.log(tripSummary);
+        }
+
+        function openWindow() {
+            window.open("/Final Exam PE/tripSummary.html", "_blank");
+            processInfo();
+        }
+    </script>
+ </body>
+ </html>
