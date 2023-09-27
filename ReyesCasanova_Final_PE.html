@@ -4,9 +4,10 @@
     Assignment: Final Practical Exam
  -->
 
- <!DOCTYPE html>
- <html lang="en">
- <head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Exam PE</title>
@@ -15,8 +16,9 @@
             margin: 1rem auto;
         }
     </style>
- </head>
- <body>
+</head>
+
+<body>
     <header>
         <h1>Michael Reyes-Casanova, Trip Stats Calculator</h1>
     </header>
@@ -48,7 +50,7 @@
             var tripSummary = {};
 
             var tripName = document.getElementById("tripName").value;
-            var startMiles = Number( document.getElementById("startMiles").value);
+            var startMiles = Number(document.getElementById("startMiles").value);
             var endMiles = Number(document.getElementById("endMiles").value);
             var totalTravel = Number(endMiles - startMiles);
             var gas = Number(document.getElementById("gas").value);
@@ -62,9 +64,10 @@
         }
 
         function openWindow() {
-            window.open("/Final Exam PE/tripSummary.html", "_blank");
+            window.open("/tripSummary.html", "_blank");
             processInfo();
         }
     </script>
- </body>
- </html>
+</body>
+
+</html>
