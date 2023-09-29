@@ -9,11 +9,20 @@
     <header>
         <h1>Michael Reyes-Casanova, Trip Summary</h1>
     </header>
-    <article>
+    <article id="results">
         <p id="name"></p>
-        <p id="miles"></p>
-        <p id="gallons"></p>
-        <p id="fuelEcon"></p>
+        <p id="travel"></p>
+        <p id="gas"></p>
+        <p id="econ"></p>
     </article>
+
+    <script>
+        
+        document.getElementById("name").innerHTML = `Trip Name: ${localStorage.getItem("name")}`;
+        document.getElementById("travel").innerHTML = `Total Miles Traveld: ${localStorage.getItem("travel")}`;
+        document.getElementById("gas").innerHTML = `Gallons of Gas Consumed: ${localStorage.getItem("gas")}`;
+        document.getElementById("econ").innerHTML = `Fuel Economy (MPG) for Trip: ${localStorage.getItem("economy")}`;
+        
+    </script>
 </body>
 </html>

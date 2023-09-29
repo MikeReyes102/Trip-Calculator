@@ -60,12 +60,31 @@
             tripSummary.gas = gas;
             tripSummary.economy = totalTravel / gas;
 
-            console.log(tripSummary);
+            for (let key in tripSummary) {
+                localStorage.setItem(key, tripSummary[key]);
+            }
+
+            let name = localStorage.getItem("name");
+            console.log(name);
+
         }
 
+
         function openWindow() {
-            window.open("/tripSummary.html", "_blank");
+
+            var propertyWidth = 600;
+            var propertyHeight = 600;
+            var winLeft = ((screen.width - propertyWidth) / 2);
+            var winTop = ((screen.height - propertyHeight) / 2);
+            var winOptions = "width=600,height=600";
+            winOptions += ",left=" + winLeft;
+            winOptions += ",top=" + winTop;
+
+            localStorage.clear();
             processInfo();
+            window.open("/tripSummary.html", "_blank", winOptions);
+            
+
         }
     </script>
 </body>
