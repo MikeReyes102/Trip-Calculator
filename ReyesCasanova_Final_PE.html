@@ -47,13 +47,13 @@
     <script>
 
         function processInfo() {
-            var tripSummary = {};
+            let tripSummary = {};
 
-            var tripName = document.getElementById("tripName").value;
-            var startMiles = Number(document.getElementById("startMiles").value);
-            var endMiles = Number(document.getElementById("endMiles").value);
-            var totalTravel = Number(endMiles - startMiles);
-            var gas = Number(document.getElementById("gas").value);
+            let tripName = document.getElementById("tripName").value;
+            let startMiles = Number(document.getElementById("startMiles").value);
+            let endMiles = Number(document.getElementById("endMiles").value);
+            let totalTravel = Number(endMiles - startMiles);
+            let gas = Number(document.getElementById("gas").value);
 
             tripSummary.name = tripName;
             tripSummary.travel = totalTravel;
@@ -72,11 +72,11 @@
 
         function openWindow() {
 
-            var propertyWidth = 600;
-            var propertyHeight = 600;
-            var winLeft = ((screen.width - propertyWidth) / 2);
-            var winTop = ((screen.height - propertyHeight) / 2);
-            var winOptions = "width=600,height=600";
+            let propertyWidth = 600;
+            let propertyHeight = 600;
+            let winLeft = ((screen.width - propertyWidth) / 2);
+            let winTop = ((screen.height - propertyHeight) / 2);
+            let winOptions = "width=600,height=600";
             winOptions += ",left=" + winLeft;
             winOptions += ",top=" + winTop;
 
